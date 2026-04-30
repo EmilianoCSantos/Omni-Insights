@@ -1,0 +1,88 @@
+.upload-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+}
+
+.upload-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upload-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.upload-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.upload-container {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-info {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-info h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.upload-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.upload-info li {
+  padding: 12px 0;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.upload-info li:last-child {
+  border-bottom: none;
+}
+
+.upload-info strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .upload-page {
+    padding: 20px 10px;
+  }
+
+  .upload-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .upload-container,
+  .upload-info {
+    padding: 20px;
+  }
+}

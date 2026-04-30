@@ -1,0 +1,263 @@
+.surface-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  background-color: #0f0f0f;
+  gap: 0;
+}
+
+.surface-sidebar {
+  width: 320px;
+  background-color: #1a1a1a;
+  border-right: 1px solid #333333;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.surface-sidebar h2 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.session-selector-wrapper {
+  margin-bottom: 25px;
+}
+
+.session-selector-wrapper h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.pcd-info-panel {
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #333333;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  color: #888888;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333333;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #3a2a2a;
+  border: 1px solid #6a4a4a;
+  border-radius: 6px;
+  padding: 12px;
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.error-message span {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #333333;
+  font-size: 13px;
+}
+
+.info-item:last-of-type {
+  border-bottom: none;
+}
+
+.info-item label {
+  color: #888888;
+  font-weight: 500;
+}
+
+.info-item span {
+  color: #cccccc;
+  word-break: break-all;
+  text-align: right;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.bounds-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333333;
+}
+
+.bounds-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.bounds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.bound-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #333333;
+}
+
+.bound-item label {
+  font-size: 11px;
+  color: #777777;
+  font-weight: 500;
+}
+
+.bound-item span {
+  font-size: 13px;
+  color: #667eea;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.metadata-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333333;
+}
+
+.metadata-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.metadata-section .info-item {
+  border-bottom: 1px solid #1a1a1a;
+  padding: 8px 0;
+}
+
+.surface-viewer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  color: #666666;
+  padding: 40px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  opacity: 0.5;
+}
+
+.empty-state h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #888888;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* Scrollbar styling */
+.surface-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.surface-sidebar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.surface-sidebar::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 3px;
+}
+
+.surface-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .surface-container {
+    flex-direction: column-reverse;
+  }
+
+  .surface-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-top: 1px solid #333333;
+    max-height: 35%;
+  }
+
+  .surface-viewer {
+    height: 65%;
+  }
+}
