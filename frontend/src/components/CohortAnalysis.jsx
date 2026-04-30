@@ -622,7 +622,6 @@ export default function CohortAnalysis() {
                             <th style={{ padding: '8px', textAlign: 'center', border: '1px solid #ddd' }}>{comparison.cohortA}</th>
                             <th style={{ padding: '8px', textAlign: 'center', border: '1px solid #ddd' }}>{comparison.cohortB}</th>
                             <th style={{ padding: '8px', textAlign: 'center', border: '1px solid #ddd' }}>Difference</th>
-                            <th style={{ padding: '8px', textAlign: 'center', border: '1px solid #ddd' }}>Significant</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -645,9 +644,6 @@ export default function CohortAnalysis() {
                               <td style={{ padding: '8px', border: '1px solid #ddd', textAlign: 'center' }}>
                                 {formatNumber(comparison.data.comparison[row.key].difference)} {row.unit}
                               </td>
-                              <td style={{ padding: '8px', border: '1px solid #ddd', textAlign: 'center', color: comparison.data.comparison[row.key].significant ? '#28a745' : '#dc3545' }}>
-                                {comparison.data.comparison[row.key].significant ? '✓' : '✗'}
-                              </td>
                             </tr>
                           ))}
                           {/* Beam On Row */}
@@ -664,7 +660,7 @@ export default function CohortAnalysis() {
                                 ? (comparison.data.groupB_beamOnPercentage - comparison.data.groupA_beamOnPercentage).toFixed(1)
                                 : 'N/A'}%
                             </td>
-                            <td style={{ padding: '8px', border: '1px solid #ddd', textAlign: 'center' }}>-</td>
+
                           </tr>
                         </tbody>
                       </table>

@@ -543,7 +543,6 @@ export default function Analysis() {
                           <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Group 1 (Mean ± SD)</th>
                           <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Group 2 (Mean ± SD)</th>
                           <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Difference</th>
-                          <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Significant</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -565,9 +564,6 @@ export default function Analysis() {
                             </td>
                             <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                               {formatNumber(comparisonResult.comparison[row.key].difference)} {row.unit}
-                            </td>
-                            <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison[row.key].significant ? '#28a745' : '#dc3545' }}>
-                              {comparisonResult.comparison[row.key].significant ? '✓' : '✗'}
                             </td>
                           </tr>
                         ))}

@@ -299,7 +299,6 @@ export default function GroupComparison() {
                     <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Group A (Mean ± SD)</th>
                     <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Group B (Mean ± SD)</th>
                     <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Difference</th>
-                    <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #ddd' }}>Significant</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -315,9 +314,6 @@ export default function GroupComparison() {
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.x.difference)} mm
                     </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.x.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.x.significant ? '✓' : '✗'}
-                    </td>
                   </tr>
 
                   <tr style={{ backgroundColor: '#f5f5f5' }}>
@@ -331,9 +327,6 @@ export default function GroupComparison() {
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.y.difference)} mm
                     </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.y.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.y.significant ? '✓' : '✗'}
-                    </td>
                   </tr>
 
                   <tr style={{ backgroundColor: '#fff' }}>
@@ -346,9 +339,6 @@ export default function GroupComparison() {
                     </td>
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.z.difference)} mm
-                    </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.z.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.z.significant ? '✓' : '✗'}
                     </td>
                   </tr>
 
@@ -364,9 +354,6 @@ export default function GroupComparison() {
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.pitch.difference)} °
                     </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.pitch.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.pitch.significant ? '✓' : '✗'}
-                    </td>
                   </tr>
 
                   <tr style={{ backgroundColor: '#fff' }}>
@@ -379,9 +366,6 @@ export default function GroupComparison() {
                     </td>
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.roll.difference)} °
-                    </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.roll.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.roll.significant ? '✓' : '✗'}
                     </td>
                   </tr>
 
@@ -396,16 +380,9 @@ export default function GroupComparison() {
                     <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>
                       {formatNumber(comparisonResult.comparison.yaw.difference)} °
                     </td>
-                    <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center', color: comparisonResult.comparison.yaw.significant ? '#28a745' : '#dc3545' }}>
-                      {comparisonResult.comparison.yaw.significant ? '✓' : '✗'}
-                    </td>
                   </tr>
                 </tbody>
               </table>
-
-              <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '4px', fontSize: '12px' }}>
-                <strong>Legend:</strong> ✓ = statistically significant difference, ✗ = not significant
-              </div>
             </div>
           )}
         </div>
